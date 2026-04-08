@@ -31,7 +31,7 @@
   "start_url": "./index.html",
   "display": "standalone",
   "orientation": "portrait",
-  "theme_color": "#2ecc71",
+  "theme_color": "#121212",
   "background_color": "#121212",
   "scope": "./"
 }
