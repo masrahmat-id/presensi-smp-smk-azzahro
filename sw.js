@@ -1,4 +1,4 @@
-const CACHE_NAME = 'presensi-azzahro-v1.0.0';
+const CACHE_NAME = 'presensi-azzahro-v1.0.2';
 const OFFLINE_URL = './offline.html';
 
 // Tambahkan library scanner dan file audio ke cache agar bisa bekerja offline
