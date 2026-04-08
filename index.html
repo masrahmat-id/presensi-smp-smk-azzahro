@@ -207,6 +207,15 @@
     <div id="about-overlay" class="overlay-about" onclick="closeAbout()"></div>
 
     <div class="main-app">
+<style>
+    /*Tombol Pasang Aplikasi*/
+</style>
+<div id="install-container" style="display: none; margin-bottom: 15px;">
+    <button id="btnInstal" style="width: 100%; background: var(--primary); color: white; border: none; padding: 12px; border-radius: 15px; font-weight: bold; font-size: 14px; cursor: pointer; box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);">
+        📥 PASANG APLIKASI PRESENSI
+    </button>
+</div>
+        
         <div class="header-container">
             <img src="logo-smp-azzahro.png" alt="SMP">
             <h3 id="text-header">PRESENSI DIGITAL<br>SMP ISLAM AZ-ZAHRO<br>SMK AZ-ZAHRO</h3>
@@ -494,5 +503,52 @@
             handleScan
         ).catch(err => console.error(err));
     </script>
+
+<script>
+    let promptInstalasi;
+    const wadahInstal = document.getElementById('install-container');
+    const tombolInstal = document.getElementById('btnInstal');
+
+    // 1. Tangkap event instalasi
+    window.addEventListener('beforeinstallprompt', (e) => {
+        // Cegah munculnya banner default browser
+        e.preventDefault();
+        // Simpan event
+        promptInstalasi = e;
+        // Munculkan tombol kustom kita
+        wadahInstal.style.display = 'block';
+    });
+
+    // 2. Logika ketika tombol diklik
+    tombolInstal.addEventListener('click', async () => {
+        if (!promptInstalasi) return;
+
+        // Tampilkan prompt instalasi asli browser
+        promptInstalasi.prompt();
+
+        // Cek pilihan pengguna (install atau batal)
+        const { outcome } = await promptInstalasi.userChoice;
+        console.log(`User memilih: ${outcome}`);
+
+        // Bersihkan variabel dan sembunyikan tombol
+        promptInstalasi = null;
+        wadahInstal.style.display = 'none';
+    });
+
+    // 3. Sembunyikan jika sudah berhasil terinstal
+    window.addEventListener('appinstalled', () => {
+        wadahInstal.style.display = 'none';
+        console.log('PWA Presensi Az-Zahro terinstal!');
+    });
+
+    // 4. Registrasi Service Worker (Pastikan file sw.js ada di root)
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('./sw.js')
+                .then(reg => console.log('SW Registered', reg))
+                .catch(err => console.error('SW Failed', err));
+        });
+    }
+</script>    
 </body>
 </html>
