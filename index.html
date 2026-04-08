@@ -46,12 +46,19 @@
             align-items: center; justify-content: center;
             color: var(--text-main); transition: background 0.4s ease;
         }
-
+        body {
+            padding-top: env(safe-area-inset-top); /* Mengikuti area aman HP */
+            background-color: var(--bg-body); /* Pastikan background body menutupi hingga atas */
+        }
         .main-app {
             width: 100%; max-width: 400px;
             padding: 0 20px; box-sizing: border-box; text-align: center;
             display: flex; flex-direction: column; height: 100%;
             justify-content: center;
+        }
+        .main-app {
+            margin-top: 0 !important;
+            padding-top: 0 !important;
         }
 
         .header-container {
