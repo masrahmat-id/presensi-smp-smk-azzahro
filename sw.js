@@ -1,4 +1,4 @@
-const CACHE_NAME = 'presensi-azzahro-v1.1.0';
+const CACHE_NAME = 'presensi-azzahro-v1.0.0';
 const OFFLINE_URL = './offline.html';
 
 // Tambahkan library scanner dan file audio ke cache agar bisa bekerja offline
@@ -9,7 +9,7 @@ const ASSETS_TO_CACHE = [
   './logo-smp-azzahro.png',
   './logo-smk-azzahro.png',
   'https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js',
-  './icon-apk-absensi-azzahro.png'
+  './icon-apk-presensi-azzahro.png'
 ];
 
 self.addEventListener('install', (e) => {
