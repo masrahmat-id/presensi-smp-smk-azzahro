@@ -353,7 +353,7 @@
 
         function applySettings() {
             const config = JSON.parse(localStorage.getItem('absensiConfig')) || {
-                sound: 'Notif01.mp3', theme: 'dark', primary: '#2ecc71',
+                sound: 'notification/Notif01.mp3', theme: 'dark', primary: '#2ecc71',
                 logoSize: '65', fontSize: '0.9', textColor: '#ffffff', bgColor: '#121212',
                 useGrad: false, g1: '#121212', g2: '#1e1e1e', g3: '#000000', gDir: '180deg'
             };
@@ -443,7 +443,7 @@
             }
 
             document.getElementById('last-name-display').value = nama;
-            const config = JSON.parse(localStorage.getItem('absensiConfig')) || { sound: 'Notif01.mp3' };
+            const config = JSON.parse(localStorage.getItem('absensiConfig')) || { sound: 'notification/Notif01.mp3' };
             new Audio(rawURL + config.sound).play().catch(() => {});
             
             fetch(`${scriptURL}?nama=${encodeURIComponent(nama)}&keterangan=${encodeURIComponent(ketValue)}`, { method: 'GET', mode: 'no-cors' });
