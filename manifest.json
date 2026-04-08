@@ -1,37 +1,36 @@
 {
-  "id": "index.html",
-  "short_name": "Presensi Az-Zahro",
   "name": "Presensi Digital Az-Zahro",
+  "short_name": "Presensi Az-Zahro",
   "description": "Aplikasi Presensi Digital SMP Islam Az-Zahro & SMK Az-Zahro",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#121212",
+  "theme_color": "#121212",
+  "orientation": "portrait",
+  "scope": "./",
   "icons": [
     {
-      "src": "./icon-apk-presensi-azzahro.png",
+      "src": "icon-apk-presensi-azzahro.png",
       "type": "image/png",
       "sizes": "180x180"
     },
     {
-      "src": "./icon-apk-presensi-azzahro.png",
+      "src": "icon-apk-presensi-azzahro.png",
       "type": "image/png",
       "sizes": "192x192",
       "purpose": "any"
     },
     {
-      "src": "./icon-apk-presensi-azzahro.png",
+      "src": "icon-apk-presensi-azzahro.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "any"
     },
     {
-      "src": "./icon-apk-presensi-azzahro.png",
+      "src": "icon-apk-presensi-azzahro.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "maskable"
     }
-  ],
-  "start_url": "./index.html",
-  "display": "standalone",
-  "orientation": "portrait",
-  "theme_color": "#121212",
-  "background_color": "#121212",
-  "scope": "./"
+  ]
 }
