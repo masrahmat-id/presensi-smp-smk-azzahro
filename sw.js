@@ -5,6 +5,7 @@ const OFFLINE_URL = './offline.html';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
+  './offline.html',
   OFFLINE_URL,
   './logo-smp-azzahro.png',
   './logo-smk-azzahro.png',
