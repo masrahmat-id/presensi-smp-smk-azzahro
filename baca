@@ -1,0 +1,6 @@
+Keterangan 
+Script ini terakhir dan di anggap sudah sempurna oleh pengembang (Rahmattullah)
+pada tanggal 15 April 2026
+script ini di rancang untuk presensi digital menggunakan barcode yang berisi nama siswa,
+dengan sistem full online yang terhubung langsung dengan google drive sabagai penyimpanan online
+data tersebut/hasil dari barcode tersebut akan merekap otomatis di googlesheet.
